@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organizador de Datos</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Organizador de Datos</h1>
+
+    <!-- Campo de texto para ingresar datos -->
+    <div class="input-section">
+        <label for="dataInput">Ingrese los datos:</label>
+        <textarea id="dataInput" rows="5" placeholder="Ejemplo: Nombre: Juan Pérez, Edad: 25, Ciudad: Madrid"></textarea>
+        <button onclick="processData()">Procesar Datos</button>
+      </div>
+      
+    <!-- Formulario para ingresar datos -->
+    <form id="dataForm">
+      <!-- Supervisor y Asesor -->
+      <label for="supervisor">Supervisor:</label>
+      <input type="text" id="supervisor" name="supervisor" value="Elio Graterol" readonly />
+
+      <label for="asesor">Asesor:</label>
+      <input type="text" id="asesor" name="asesor" value="Moises Lopez" readonly />
+
+      <!-- Datos personales -->
+      <label for="curp">CURP:</label>
+      <input type="text" id="curp" name="curp" required />
+
+      <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+      <input type="date" id="fechaNacimiento" name="fechaNacimiento" required />
+
+      <label for="lugarNacimiento">Lugar de Nacimiento:</label>
+      <input type="text" id="lugarNacimiento" name="lugarNacimiento" required />
+
+      <!-- Datos del cliente -->
+      <label for="dn1">DN1 (10 dígitos):</label>
+      <input type="text" id="dn1" name="dn1" pattern="\d{10}" required />
+
+      <label for="dn2">DN2 (10 dígitos, opcional):</label>
+      <input type="text" id="dn2" name="dn2" pattern="\d{10}" />
+
+      <label for="nip">NIP (4 dígitos):</label>
+      <input type="text" id="nip" name="nip" pattern="\d{4}" required />
+
+      <label for="fechaVigencia">Fecha de Vigencia:</label>
+      <input type="date" id="fechaVigencia" name="fechaVigencia" required />
+
+      <!-- Equipo y cuotas -->
+      <label for="equipo">Equipo (Modelo de teléfono):</label>
+      <input type="text" id="equipo" name="equipo" required />
+
+      <label for="cuotas">Cuotas:</label>
+      <input type="text" id="cuotas" name="cuotas" required />
+
+      <label for="colores">Colores:</label>
+      <input type="text" id="colores" name="colores" required />
+
+      <!-- Fecha y hora -->
+      <label for="fechaPago">Fecha de Pago:</label>
+      <input type="date" id="fechaPago" name="fechaPago" required />
+
+      <label for="horaSucursal">Hora Sucursal:</label>
+      <input type="time" id="horaSucursal" name="horaSucursal" required />
+
+      <!-- Correo y CAC -->
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" value="NP@gmail.com" readonly />
+
+      <label for="cac">CAC (Sucursal):</label>
+      <input type="text" id="cac" name="cac" required />
+
+      <button type="submit">Agregar</button>
+    </form>
+
+    <!-- Tabla para mostrar los datos -->
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Supervisor</th>
+          <th>Asesor</th>
+          <th>CURP</th>
+          <th>Fecha Nacimiento</th>
+          <th>Lugar Nacimiento</th>
+          <th>DN1</th>
+          <th>DN2</th>
+          <th>NIP</th>
+          <th>Fecha Vigencia</th>
+          <th>Equipo</th>
+          <th>Cuotas</th>
+          <th>Colores</th>
+          <th>Fecha Pago</th>
+          <th>Hora Sucursal</th>
+          <th>Correo</th>
+          <th>CAC</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Los datos se agregarán aquí dinámicamente -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Script para procesar los datos -->
+  <script src="script.js"></script>
+</body>
+</html>
